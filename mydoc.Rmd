@@ -1,0 +1,16 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r load_stuff, echo=FALSE}
+library(ggplot2)
+df <- read.csv('C:/Users/Raisa/Desktop/R/sw 2/gapminder-FiveYearData.csv')
+```
+
+```{r, fig.height= 5, fig.width= 10, echo=FALSE}
+ggplot(df, aes(x=lifeExp, y = gdpPercap)) + geom_point()
+```
+
+The mean per capital GDP in the data set is
+`r round(mean(df$gdpPercap))`.
