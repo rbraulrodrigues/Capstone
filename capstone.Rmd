@@ -1,0 +1,31 @@
+---
+title: "Capstone"
+author: "Raisa"
+date: "July 7, 2015"
+output: html_document
+---
+```{r, echo=FALSE}
+library(dplyr)
+library(ggplot2)
+```
+
+##Brazil
+```{r first_chunk, echo=FALSE}
+df <- read.csv('C:/Users/Raisa/Desktop/R/sw 2/Capstone/gapminder-FiveYearData.csv')
+
+df2 <- filter(df, country == "Brazil")
+ggplot(data = df2, aes(x = year, y = gdpPercap, by = country)) + geom_line()
+```
+
+##China
+```{r second, echo=FALSE}
+df3 <- filter(df, country == "China")
+ggplot(data = df3, aes(x = year, y = gdpPercap, by = country)) + geom_line()
+```
+
+##India
+```{r third, echo=FALSE}
+df4 <- filter(df, country == "India")
+ggplot(data = df4, aes(x = year, y = gdpPercap, by = country)) + geom_line()
+```
+
