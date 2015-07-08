@@ -27,5 +27,15 @@ ggplot(data = df3, aes(x = year, y = gdpPercap, by = country)) + geom_line()
 ```{r third, echo=FALSE}
 df4 <- filter(df, country == "India")
 ggplot(data = df4, aes(x = year, y = gdpPercap, by = country)) + geom_line()
+
+asia <- filter(df, year == 2007, continent == "Asia")
+europe <- filter(df, year == 2007, continent == "Europe")
+africa <- filter(df, year == 2007, continent == "Africa")
+americas <- filter(df, year == 2007, continent == "Americas")
+
 ```
 
+`r round(mean(asia$lifeExp))`
+`r round(mean(europe$lifeExp))`
+`r round(mean(africa$lifeExp))`
+`r round(mean(americas$lifeExp))`
